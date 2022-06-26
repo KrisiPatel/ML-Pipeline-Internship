@@ -38,3 +38,13 @@ STEPS TO DOCKERISATION OF THE FLASK APPLICATION :
 8.	Build the docker image docker build –-tag python-docker .
 9.	Run the docker image as a container docker images
 10.	Run an image docker run
+
+
+Minikube Installation on Windows  https://www.youtube.com/watch?v=qQnYrPErXOE
+Step 1: Check if virtualisation is supported in your machine
+Step 2: Download/Install kubectl, minikube utility and add it to to the local ENV PATH
+Step 3: Download/Install a Hypervisor | ORACLE VM BOX
+Step 4: Start  Minikube 
+Step 5: Create and Expose a container in the Minikube Cluster
+Step 6: Test or Access the Container
+Step 7: Lab Cleanup
