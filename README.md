@@ -83,3 +83,15 @@ Solution:
 4.	kubectl apply -f  ./service.yaml
 5.	touch ingress.yaml
 6.	code .
+
+Install Keras :
+
+1.	Open up command prompt
+2.	Create a keras folder and go that folder in cmd
+3.	Make sure the virtual environment is set up : virtualenv –version
+4.	virtualenv venv
+5.	.\venv\Scripts\activate
+6.	pip install keras
+7.	pip install tensorflow
+8.	pip install matplotlib 
+
