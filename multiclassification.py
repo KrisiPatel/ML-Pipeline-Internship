@@ -1,9 +1,13 @@
 #https://www.youtube.com/watch?v=oOSXQP7C7ck&t=38s
+
+
 import keras
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation
 from keras.optimizers import SGD
 import numpy as np
+import pickle
+
 
 #generate dummy data
 x_train = np.random.random((1000, 20))
@@ -15,6 +19,7 @@ x_train[50:51]
 y_train[50:51]
 x_test[0]
 y_test[0]
+
 
 model = Sequential()
 #Dense(64) is a fully-connected layer with 64 hidden units
@@ -38,4 +43,15 @@ model.metrics_names
 
 score
 
-model.predict(x_train[50:51], batch_size=None, verbose = 0, steps=None)
+#to save the whole model  https://www.youtube.com/watch?v=NVY0FucNRU4
+model.save("saving_file")
+
+new_model = keras.models.load_model("saving_file")
+score = model.evaluate(x_test, y_test, batch_size=128,)
+
+
+#pickle_out = open("flask_deployment.pkl")
+#pickle.dump(model, pickle_out)
+#loaded_model = pickle.load(open("flask_deployment.pkl","rb"))
+#result = loaded_model.score(x_test,y_test)
+#print(result)
